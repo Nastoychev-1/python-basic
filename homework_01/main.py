@@ -18,7 +18,7 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
-def is_prime(numbers_list, filter_type):
+
 def filter_numbers(numbers_list, filter_type):
     """
     функция, которая на вход принимает список из целых чисел,
@@ -32,7 +32,9 @@ def filter_numbers(numbers_list, filter_type):
     """
     if filter_type == ODD:
         return [number for number in numbers_list if number % 2 != 0]
-    if filter_type == EVEN:
+    if filter_type == EVEN
         return [number for number in numbers_list if number % 2 == 0]
+
+def is_prime(numbers_list, filter_type):
     if filter_type == PRIME:
         return [number for number in numbers_list if number % number == 0 and number != 0]
