@@ -10,7 +10,7 @@ class Car(Vehicle):
     engine: str
 
     def set_engine(self, engine):
-        self.engine = Engine(volume=5, pistons=5)
+        self.engine = engine
 
         # self.volume = Engine.volume
         # self.pistons = Engine.pistons
