@@ -58,6 +58,6 @@ async def drop_tables():
         await connect.run_sync(Base_declarative.metadata.drop_all)
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     asyncio.get_event_loop().run_until_complete(drop_tables())
     asyncio.get_event_loop().run_until_complete(create_tables())
