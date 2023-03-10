@@ -15,15 +15,15 @@ from sqlalchemy.orm import sessionmaker, declarative_base, declared_attr, relati
 from sqlalchemy import Column, Integer, String, DateTime, Text, ForeignKey
 
 PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or \
-              "postgresql+asyncpg://username:passwd!@localhost:5432/postgres"
+              "postgresql+asyncpg://username:passwd@localhost:5432/postgres"
 
 async_engine: AsyncEngine = create_async_engine(url=PG_CONN_URI, echo=False)
 
 
 class Base:
     @declared_attr
-    def __tablename__(self):
-        return f"{self.__name__.lower()}"
+    def __tablename__(cls):
+        return f"{cls.__name__.lower()}"
 
     id = Column(Integer, primary_key=True)
 
