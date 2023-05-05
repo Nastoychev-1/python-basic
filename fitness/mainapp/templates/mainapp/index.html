@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for exerise in exerises %}
+            <li>
+                {{exerise.name}} | {{exerise.category.name}}
+            </li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
