@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for exerise in exerises %}
+            <li>
+                {{exerise.name}} | {{exerise.category.name}}
+            </li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
